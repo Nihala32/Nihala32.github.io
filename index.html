@@ -4,175 +4,371 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Amina Nihala K – Full Stack Developer</title>
+<meta name="description" content="Full Stack Developer in Dubai building web apps with Angular, ASP.NET Core and SQL Server.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f6f7fb;--surface:#fff;--ink:#16203a;--muted:#5b6682;--line:#e1e5ef;--accent:#3d4fd6;--accent-soft:#e8ebff;--on-accent:#fff;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1424;--surface:#171d33;--ink:#eef1fb;--muted:#a3adc9;--line:#273050;--accent:#8e9cff;--accent-soft:#222a52;--on-accent:#0f1424}}
-:root[data-theme="dark"]{--bg:#0f1424;--surface:#171d33;--ink:#eef1fb;--muted:#a3adc9;--line:#273050;--accent:#8e9cff;--accent-soft:#222a52;--on-accent:#0f1424}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65;font-size:16px}
-h1,h2,h3{font-family:Sora,Manrope,system-ui,sans-serif;line-height:1.15;margin:0}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
-.wrap{max-width:960px;margin:0 auto;padding:0 24px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-weight:600;font-size:15px}
-nav .links{display:flex;gap:22px}
-nav a{text-decoration:none;color:var(--muted)}
-nav a:hover{color:var(--accent)}
-.hero{padding:72px 0 80px;display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center}
-.hero h1{font-size:clamp(40px,7vw,68px);font-weight:700;letter-spacing:-.03em}
-.hero .role{font-size:clamp(18px,2.4vw,22px);color:var(--accent);font-weight:600;margin:18px 0 14px}
-.hero p{color:var(--muted);max-width:52ch;margin:0 0 28px}
-.btns{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;font-size:15px;border:1.5px solid var(--accent)}
-.btn.primary{background:var(--accent);color:var(--on-accent)}
-.btn.ghost{color:var(--accent)}
-.btn:hover{opacity:.88}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px}
-.facts{list-style:none;margin:0;padding:0;display:grid;gap:16px}
-.facts li{display:flex;flex-direction:column;font-size:14px;color:var(--muted)}
-.facts b{font-family:Sora,sans-serif;font-size:20px;color:var(--ink);font-weight:600}
-section{padding:56px 0;border-top:1px solid var(--line)}
-section>.wrap>h2{font-size:28px;margin-bottom:28px;letter-spacing:-.02em}
-.about{max-width:66ch;color:var(--muted);font-size:17px}
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.skills h3{font-size:16px;margin-bottom:12px}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{background:var(--accent-soft);color:var(--accent);padding:4px 12px;border-radius:999px;font-size:13.5px;font-weight:600}
-.timeline{border-left:2px solid var(--line);margin-left:6px;padding-left:28px;display:grid;gap:36px}
-.job{position:relative}
-.job::before{content:"";position:absolute;left:-36px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
-.job h3{font-size:19px}
-.job .meta{color:var(--muted);font-size:14.5px;margin:4px 0 12px}
-.job ul{margin:0;padding-left:18px;color:var(--muted)}
-.job li{margin-bottom:6px}
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-.projects h3{font-size:18px;margin-bottom:6px}
-.projects p{color:var(--muted);font-size:15px;margin:10px 0 14px}
-.projects a.link{color:var(--accent);font-weight:600;text-decoration:none;font-size:15px}
-.projects a.link:hover{text-decoration:underline}
-.contact{text-align:center}
-.contact p{color:var(--muted);max-width:50ch;margin:0 auto 24px}
-.contact .btns{justify-content:center}
-footer{padding:32px 0;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
-@media (max-width:760px){.hero{grid-template-columns:1fr;padding:40px 0 56px;gap:32px}nav .links{gap:14px;font-size:14px}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:root{
+  --bg:#0d1016; --surface:#151a23; --line:#262d3a; --text:#e8ebf2; --muted:#8e97a8;
+  --accent:#8fa0ff; --accent-ink:#0d1016; --ok:#5fd4a0;
+  --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"DM Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --pad:clamp(1.25rem,5vw,3rem);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{background:var(--bg);color:var(--text);font:400 1rem/1.65 var(--body);padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right);-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 var(--pad)}
+section{padding:clamp(3.5rem,9vw,6.5rem) 0}
+h1,h2,h3{font-family:var(--head);line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,4.5vw,2.8rem);margin-bottom:2rem}
+h3{font-size:1.2rem;font-weight:700}
+p{max-width:65ch}
+.muted{color:var(--muted)}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(13,16,22,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:4rem}
+.logo{font:800 1.25rem var(--head)}
+.logo span{color:var(--accent)}
+nav ul{display:flex;gap:2rem;list-style:none;padding:0}
+nav a{color:var(--muted);font-size:.95rem;transition:color .2s}
+nav a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.65rem 1.4rem;border-radius:999px;font-weight:600;font-size:.95rem;border:1px solid var(--line);transition:transform .2s,background .2s,border-color .2s}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.primary:hover{transform:translateY(-2px)}
+.menu{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:2.75rem;height:2.75rem;color:var(--text);cursor:pointer}
+.menu svg{display:block;margin:auto}
+
+/* hero */
+.hero{padding-top:clamp(3rem,8vw,6rem)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.status{display:inline-flex;align-items:center;gap:.6rem;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.4rem 1rem;font-size:.88rem;color:var(--muted);margin-bottom:1.5rem}
+.dot{width:.55rem;height:.55rem;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 rgba(95,212,160,.6);animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 .55rem rgba(95,212,160,0)}100%{box-shadow:0 0 0 0 rgba(95,212,160,0)}}
+h1{font-size:clamp(3rem,11vw,6.6rem);font-weight:800;letter-spacing:-.04em;line-height:.95;margin-bottom:1.2rem;overflow-wrap:anywhere}
+h1 span{display:block;color:transparent;-webkit-text-stroke:2px var(--accent)}
+.role{font:500 clamp(1.15rem,2.6vw,1.5rem) var(--mono);color:var(--text);margin-bottom:1.2rem;min-height:2em}
+.role::before{content:"> ";color:var(--accent)}
+#typed::after{content:"";display:inline-block;width:.55ch;height:1.1em;background:var(--accent);margin-left:.2ch;vertical-align:-.15em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p.lead{color:var(--muted);font-size:1.08rem;margin-bottom:2rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.code{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;font:400 .88rem/1.8 var(--mono)}
+.code-top{display:flex;align-items:center;gap:.4rem;padding:.7rem 1rem;border-bottom:1px solid var(--line);color:var(--muted);font-size:.8rem}
+.code-top i{width:.65rem;height:.65rem;border-radius:50%;background:var(--line)}
+.code-top span{margin-left:.6rem}
+.code pre{padding:1.1rem 1.2rem;overflow-x:auto;font:inherit}
+.k{color:#c49bff}.t{color:#7fd6e6}.s{color:#9fe3b0}.n{color:#ffb86b}.c{color:#6c7589}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:clamp(2.5rem,6vw,4rem)}
+.stat{border-top:1px solid var(--line);padding-top:1rem}
+.stat b{display:block;font:800 clamp(1.8rem,4vw,2.6rem)/1 var(--head)}
+.stat span{color:var(--muted);font-size:.92rem}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(2rem,5vw,4rem)}
+.about-grid p+p{margin-top:1rem}
+.facts{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.4rem;font:400 .88rem/1.7 var(--mono);align-self:start}
+.facts div{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;border-bottom:1px dashed var(--line)}
+.facts div:last-child{border:0}
+.facts dt{color:var(--muted)}.facts dd{text-align:right;margin:0}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-top:2.5rem}
+.pillar{border:1px solid var(--line);border-radius:14px;padding:1.3rem}
+.pillar p{color:var(--muted);font-size:.95rem;margin-top:.5rem}
+
+/* experience */
+.job{display:grid;grid-template-columns:200px 1fr;gap:1.5rem;padding:1.8rem 0;border-top:1px solid var(--line)}
+.job:last-child{border-bottom:1px solid var(--line)}
+.when{color:var(--muted);font:400 .88rem var(--mono)}
+.job h3{margin-bottom:.15rem}
+.org{color:var(--accent);margin-bottom:.9rem}
+.job ul{padding-left:1.1rem;color:var(--muted)}
+.job li{margin-bottom:.4rem;padding-left:.2rem}
+
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1.2rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.6rem;display:flex;flex-direction:column;gap:.9rem;transition:border-color .2s,transform .2s}
+a.card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.card p{color:var(--muted);font-size:.96rem}
+.card .more{margin-top:auto;color:var(--accent);font-weight:600;font-size:.92rem}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem}
+.tags li{list-style:none;border:1px solid var(--line);border-radius:999px;padding:.2rem .75rem;font-size:.8rem;color:var(--muted);background:rgba(255,255,255,.02)}
+ul.tags{padding:0}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:2rem 1.5rem}
+.skills h3{font-size:1rem;margin-bottom:.8rem;color:var(--muted);font-weight:600}
+
+/* contact */
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:clamp(1.8rem,5vw,3.5rem);display:grid;grid-template-columns:1.1fr .9fr;gap:2rem}
+.contact h2{margin-bottom:1rem}
+.contact p{color:var(--muted);margin-bottom:1.6rem}
+.links{display:grid;gap:.2rem;align-content:start}
+.links a{display:flex;justify-content:space-between;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--line);word-break:break-word}
+.links a:hover{color:var(--accent)}
+.links span{color:var(--muted)}
+.edu{margin-top:1.4rem;font-size:.92rem;color:var(--muted)}
+footer{padding:2rem 0 calc(2rem + env(safe-area-inset-bottom));color:var(--muted);font-size:.88rem;text-align:center;border-top:1px solid var(--line);margin-top:3rem}
+
+/* extra styling and effects */
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;opacity:.22;-webkit-mask-image:radial-gradient(ellipse at 50% 0%,#000 15%,transparent 70%);mask-image:radial-gradient(ellipse at 50% 0%,#000 15%,transparent 70%)}
+.glow{position:fixed;top:-14rem;left:50%;width:min(52rem,120vw);height:34rem;margin-left:calc(min(52rem,120vw)/-2);background:radial-gradient(closest-side,rgba(143,160,255,.3),rgba(196,155,255,.12) 55%,transparent);filter:blur(30px);z-index:-1;pointer-events:none;animation:drift 12s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(6rem,2rem) scale(1.1)}}
+.progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:40;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--accent),#c49bff,#7fd6e6)}
+.btn.primary{background:linear-gradient(120deg,var(--accent),#b9a8ff)}
+.btn.primary:hover{box-shadow:0 10px 30px -8px rgba(143,160,255,.7)}
+h1 span{background:linear-gradient(100deg,var(--accent),#c49bff,#7fd6e6,var(--accent)) 0 0/300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:0;animation:sheen 8s linear infinite}
+@keyframes sheen{to{background-position:300% 0}}
+@property --a{syntax:"<angle>";initial-value:0deg;inherits:false}
+.code{border:1px solid transparent;background:linear-gradient(var(--surface),var(--surface)) padding-box,conic-gradient(from var(--a),var(--accent),#c49bff,#7fd6e6,var(--accent)) border-box;animation:spin 7s linear infinite;box-shadow:0 30px 80px -30px rgba(143,160,255,.35)}
+@keyframes spin{to{--a:360deg}}
+h2::after{content:"";display:block;width:2.5rem;height:3px;margin-top:.8rem;border-radius:3px;background:linear-gradient(90deg,var(--accent),#c49bff);transition:width .7s .2s}
+h2.in::after{width:5.5rem}
+.card,.pillar{position:relative;overflow:hidden}
+.card::after,.pillar::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(280px circle at var(--mx,50%) var(--my,50%),rgba(143,160,255,.16),transparent 70%)}
+.card:hover::after,.pillar:hover::after{opacity:1}
+.pillar{transition:border-color .2s}.pillar:hover{border-color:var(--accent)}
+.tags li{transition:color .2s,border-color .2s,transform .2s}
+.tags li:hover{color:var(--text);border-color:var(--accent);transform:translateY(-2px)}
+.job{transition:background .3s}
+.job:hover{background:linear-gradient(90deg,rgba(143,160,255,.06),transparent 70%)}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s,border-color .2s}
+.rv.in{opacity:1;transform:none;transition:opacity .6s,transform .25s,border-color .2s}
+@media (min-width:761px){nav a{position:relative}nav a.on{color:var(--text)}nav a.on::after{content:"";position:absolute;left:0;right:0;bottom:-.45rem;height:2px;border-radius:2px;background:var(--accent)}}
+@media (max-width:760px){nav a.on{color:var(--accent)}}
+
+/* one entrance moment: hero only */
+.hero .wrap>*{animation:rise .7s both}
+.hero .stats{animation-delay:.25s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* responsive */
+@media (max-width:900px){
+  .hero-grid,.about-grid,.contact{grid-template-columns:1fr}
+  .job{grid-template-columns:1fr;gap:.4rem}
+}
+@media (max-width:760px){
+  .menu{display:block}
+  .bar>.btn{display:none}
+  nav{position:absolute;inset:100% 0 auto 0;background:var(--bg);border-bottom:1px solid var(--line);display:none;padding:.5rem var(--pad) 1.2rem}
+  nav.open{display:block}
+  nav ul{flex-direction:column;gap:0}
+  nav a{display:block;padding:.9rem 0;font-size:1.05rem;border-bottom:1px solid var(--line)}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:last-child{grid-column:1/-1}
+  .cta .btn{flex:1 1 100%}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <nav aria-label="Main">
-    <span>Amina Nihala K</span>
-    <div class="links"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
-  </nav>
+<div class="progress" id="bar" aria-hidden="true"></div>
+<div class="glow" aria-hidden="true"></div>
 
-  <header class="hero">
-    <div>
-      <h1>Hi, I’m Amina.</h1>
-      <div class="role">Full Stack Developer · Angular &amp; .NET</div>
-      <p>I build fast, maintainable web apps with Angular and ASP.NET Core, from the SQL Server queries at the bottom to the interface people actually click. I also use Docker and CI/CD pipelines to build and ship it reliably.</p>
-      <div class="btns">
-        <a class="btn primary" href="#contact">Get in touch</a>
-        <a class="btn ghost" href="#projects">See my work</a>
+<header>
+  <div class="wrap bar">
+    <a href="#home" class="logo">Amina<span>.</span></a>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn primary" href="mailto:aminanihala2018@gmail.com">Get in touch</a>
+    <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="status"><span class="dot"></span>Immediate joiner · Al Nahda, Dubai</div>
+        <h1>Amina<span>Nihala K</span></h1>
+        <p class="role" aria-label="Full Stack Developer"><span id="typed">Full Stack Developer</span></p>
+        <p class="lead">I build fast, maintainable web apps with Angular and ASP.NET Core, from the SQL Server queries at the bottom to the interface people actually click. I also use Docker and CI/CD pipelines to ship them reliably.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">See my work</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="code" aria-hidden="true">
+        <div class="code-top"><i></i><i></i><i></i><span>Developer.cs</span></div>
+<pre><span class="k">var</span> dev = <span class="k">new</span> <span class="t">Developer</span>
+{
+  Name   = <span class="s">"Amina Nihala K"</span>,
+  Role   = <span class="s">"Full Stack"</span>,
+  Stack  = [<span class="s">"Angular"</span>, <span class="s">".NET 8"</span>,
+            <span class="s">"SQL Server"</span>],
+  Based  = <span class="s">"Dubai"</span>,
+  Shipping = <span class="n">true</span>
+};</pre>
       </div>
     </div>
-    <aside class="card" aria-label="Quick facts">
-      <ul class="facts">
-        <li><b>4 years</b>building enterprise web apps</li>
-        <li><b>Hands-on DevOps</b>Docker and GitHub Actions CI pipelines</li>
-        <li><b>Al Nahda, Dubai</b>available as an immediate joiner</li>
-      </ul>
-    </aside>
-  </header>
-</div>
-
-<section id="about"><div class="wrap">
-  <h2>About</h2>
-  <p class="about">I’m a Full Stack .NET developer with four years of experience in Angular, ASP.NET Core, C# and SQL Server. I’ve built scalable REST APIs and responsive Angular apps for legal operations automation and B2B SaaS. I care about clean architecture, query performance and code that’s easy for the next person to read. I have hands-on CI/CD experience with GitHub Actions, Docker and Docker Compose, and I’m extending it to Azure DevOps pipelines.</p>
-</div></section>
-
-<section id="skills"><div class="wrap">
-  <h2>Skills</h2>
-  <div class="skills">
-    <div class="card"><h3>Frontend</h3><div class="chips"><span class="chip">Angular 20</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">HTML5</span><span class="chip">CSS3 / SCSS</span><span class="chip">Bootstrap</span><span class="chip">Kendo UI</span></div></div>
-    <div class="card"><h3>Backend</h3><div class="chips"><span class="chip">ASP.NET Core</span><span class="chip">.NET 8</span><span class="chip">C#</span><span class="chip">REST APIs</span><span class="chip">Entity Framework Core</span></div></div>
-    <div class="card"><h3>State &amp; data</h3><div class="chips"><span class="chip">RxJS</span><span class="chip">NgRx</span><span class="chip">SQL Server</span><span class="chip">Stored procedures</span><span class="chip">Query optimization</span></div></div>
-    <div class="card"><h3>DevOps &amp; CI/CD</h3><div class="chips"><span class="chip">CI/CD</span><span class="chip">GitHub Actions</span><span class="chip">Docker</span><span class="chip">Docker Compose</span><span class="chip">nginx</span><span class="chip">Git</span><span class="chip">Jira</span><span class="chip">Figma</span><span class="chip">Agile / Scrum</span></div></div>
-  </div>
-</div></section>
-
-<section id="experience"><div class="wrap">
-  <h2>Experience</h2>
-  <div class="timeline">
-    <div class="job">
-      <h3>Software Engineer L2</h3>
-      <div class="meta">ALB Technology Pvt Ltd · May 2025 – Present</div>
-      <ul>
-        <li>Built Legal Operations Automation modules: line entry management, AI-driven validation workflows and audit trail reporting for multiple client deployments.</li>
-        <li>Designed REST APIs and Entity Framework Core data layers, and optimized SQL queries behind legal workflows.</li>
-        <li>Created responsive, reusable Angular components that improved usability and performance.</li>
-        <li>Worked with Agile teams on client-specific enhancements and code reviews.</li>
-      </ul>
-    </div>
-    <div class="job">
-      <h3>Junior Software Developer</h3>
-      <div class="meta">Panasa Technology Pvt Ltd · Dec 2022 – Apr 2025</div>
-      <ul>
-        <li>Built a scalable B2B Email Campaign Lead Generation Platform with Angular, RxJS, ASP.NET Core and SQL Server.</li>
-        <li>Cut load times by 30% with lazy loading, OnPush change detection and efficient API design.</li>
-        <li>Wrote reusable Angular components and .NET Core modules that reduced code duplication.</li>
-        <li>Tuned SQL Server queries and stored procedures for speed and data integrity.</li>
-      </ul>
+    <div class="stats">
+      <div class="stat"><b>4 years</b><span>Building enterprise web apps</span></div>
+      <div class="stat"><b>DevOps</b><span>Hands-on, from Docker builds to automated pipelines</span></div>
+      <div class="stat"><b>CI/CD</b><span>Docker and GitHub Actions pipelines</span></div>
     </div>
   </div>
-</div></section>
+</section>
 
-<section id="projects"><div class="wrap">
-  <h2>Projects</h2>
-  <div class="projects">
-    <article class="card">
-      <h3>Job Application Tracker</h3>
-      <div class="chips"><span class="chip">Angular</span><span class="chip">.NET 8</span><span class="chip">Docker Compose</span><span class="chip">GitHub Actions</span><span class="chip">CI/CD</span></div>
-      <p>A full stack tracker with a dashboard, search and filters, covering the full build-and-run workflow. Docker Compose runs the API, nginx-served Angular frontend and SQL Server with one command, using database health checks and automatic EF Core migrations. A GitHub Actions pipeline builds the API, the Angular app and the Docker images on every push.</p>
-      <a class="link" href="https://github.com/Nihala32/jobtracker-devops" target="_blank" rel="noopener">View on GitHub</a>
+<section id="about">
+  <div class="wrap">
+    <h2>What I do</h2>
+    <div class="about-grid">
+      <div>
+        <p>I’m a Full Stack .NET developer with four years of experience in Angular, ASP.NET Core, C# and SQL Server. I’ve built scalable REST APIs and responsive Angular apps for legal operations automation and B2B SaaS.</p>
+        <p>I care about clean architecture, query performance and code that’s easy for the next person to read. I have hands-on CI/CD experience with GitHub Actions, Docker and Docker Compose, and I’m extending it to Azure DevOps pipelines.</p>
+      </div>
+      <dl class="facts">
+        <div><dt>location</dt><dd>Al Nahda, Dubai</dd></div>
+        <div><dt>experience</dt><dd>4 years</dd></div>
+        <div><dt>role</dt><dd>Full Stack · .NET</dd></div>
+        <div><dt>status</dt><dd>Open to new roles</dd></div>
+      </dl>
+    </div>
+    <div class="pillars">
+      <div class="pillar"><h3>Angular front ends</h3><p>Reusable, typed components with RxJS and NgRx, lazy loading and OnPush change detection.</p></div>
+      <div class="pillar"><h3>.NET back ends</h3><p>REST APIs on ASP.NET Core with Entity Framework Core data layers.</p></div>
+      <div class="pillar"><h3>Data and delivery</h3><p>Tuned SQL Server queries and stored procedures, shipped with Docker and GitHub Actions.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Where I’ve worked</h2>
+    <article class="job">
+      <div class="when">May 2025 – Oct 2026</div>
+      <div>
+        <h3>Software Engineer L2</h3>
+        <p class="org">ALB Technology Pvt Ltd</p>
+        <ul>
+          <li>Built Legal Operations Automation modules: line entry management, AI-driven validation workflows and audit trail reporting for multiple client deployments.</li>
+          <li>Designed REST APIs and Entity Framework Core data layers, and optimized SQL queries behind legal workflows.</li>
+          <li>Created responsive, reusable Angular components that improved usability and performance.</li>
+          <li>Worked with Agile teams on client-specific enhancements and code reviews.</li>
+        </ul>
+      </div>
     </article>
-    <article class="card">
-      <h3>Legal Operations Automation</h3>
-      <div class="chips"><span class="chip">ASP.NET Core</span><span class="chip">Angular</span><span class="chip">SQL Server</span><span class="chip">Kendo UI</span></div>
-      <p>A law firm platform with AI-assisted validation and audit trails, configurable per client and built to scale across deployments.</p>
-    </article>
-    <article class="card">
-      <h3>Neptik</h3>
-      <div class="chips"><span class="chip">Angular</span><span class="chip">RxJS</span><span class="chip">SQL Server</span></div>
-      <p>Email campaign software with a rich-text editor, dynamic merge fields for personalization, and real-time preview rendering.</p>
-    </article>
-    <article class="card">
-      <h3>TASC Workflow</h3>
-      <div class="chips"><span class="chip">Angular</span><span class="chip">REST APIs</span></div>
-      <p>A campaign and task queuing system with dynamic task management screens that automate work across client workflows.</p>
+    <article class="job">
+      <div class="when">Dec 2022 – Apr 2025</div>
+      <div>
+        <h3>Junior Software Developer</h3>
+        <p class="org">Panasa Technology Pvt Ltd</p>
+        <ul>
+          <li>Built a scalable B2B Email Campaign Lead Generation Platform with Angular, RxJS, ASP.NET Core and SQL Server.</li>
+          <li>Cut load times by 30% with lazy loading, OnPush change detection and efficient API design.</li>
+          <li>Wrote reusable Angular components and .NET Core modules that reduced code duplication.</li>
+          <li>Tuned SQL Server queries and stored procedures for speed and data integrity.</li>
+        </ul>
+      </div>
     </article>
   </div>
-</div></section>
+</section>
 
-<section id="education"><div class="wrap">
-  <h2>Education</h2>
-  <div class="card"><h3 style="font-size:18px">Bachelor of Computer Applications (BCA)</h3><div style="color:var(--muted);margin-top:6px">SAFI Institute of Advanced Study, Kerala · 2018 – 2021</div></div>
-</div></section>
-
-<section id="contact" class="contact"><div class="wrap">
-  <h2 style="margin-bottom:14px">Let’s work together</h2>
-  <p>I’m open to full stack, .NET and Angular roles in Dubai and Abu Dhabi, and to remote contract work.</p>
-  <div class="btns">
-    <a class="btn primary" href="mailto:aminanihala2018@gmail.com">Email me</a>
-    <a class="btn ghost" href="https://www.linkedin.com/in/amina-nihala-670538222" target="_blank" rel="noopener">LinkedIn</a>
-    <a class="btn ghost" href="https://github.com/Nihala32" target="_blank" rel="noopener">GitHub</a>
-    <a class="btn ghost" href="tel:+971509805323">+971 50 980 5323</a>
+<section id="projects">
+  <div class="wrap">
+    <h2>Selected work</h2>
+    <div class="projects">
+      <a class="card" href="https://github.com/Nihala32/jobtracker-devops" target="_blank" rel="noopener">
+        <h3>Job Application Tracker</h3>
+        <p>A full stack tracker with a dashboard, search and filters. Docker Compose runs the API, nginx-served Angular frontend and SQL Server with one command, with database health checks and automatic EF Core migrations. GitHub Actions builds the API, the Angular app and the Docker images on every push.</p>
+        <ul class="tags"><li>Angular</li><li>.NET 8</li><li>Docker Compose</li><li>GitHub Actions</li></ul>
+        <span class="more">View on GitHub</span>
+      </a>
+      <div class="card">
+        <h3>Legal Operations Automation</h3>
+        <p>A law firm platform with AI-assisted validation and audit trails, configurable per client and built to scale across deployments.</p>
+        <ul class="tags"><li>ASP.NET Core</li><li>Angular</li><li>SQL Server</li><li>Kendo UI</li></ul>
+      </div>
+      <div class="card">
+        <h3>Neptik</h3>
+        <p>Email campaign software with a rich-text editor, dynamic merge fields for personalization, and real-time preview rendering.</p>
+        <ul class="tags"><li>Angular</li><li>RxJS</li><li>SQL Server</li></ul>
+      </div>
+      <div class="card">
+        <h3>TASC Workflow</h3>
+        <p>A campaign and task queuing system with dynamic task management screens that automate work across client workflows.</p>
+        <ul class="tags"><li>Angular</li><li>REST APIs</li></ul>
+      </div>
+    </div>
   </div>
-</div></section>
+</section>
 
-<footer>© 2026 Amina Nihala K · Al Nahda, Dubai, UAE</footer>
+<section id="skills">
+  <div class="wrap">
+    <h2>Toolkit</h2>
+    <div class="skills">
+      <div><h3>Frontend</h3><ul class="tags"><li>Angular 20</li><li>TypeScript</li><li>JavaScript</li><li>HTML5</li><li>CSS3 / SCSS</li><li>Bootstrap</li><li>Kendo UI</li></ul></div>
+      <div><h3>Backend</h3><ul class="tags"><li>ASP.NET Core</li><li>.NET 8</li><li>C#</li><li>REST APIs</li><li>Entity Framework Core</li></ul></div>
+      <div><h3>State and data</h3><ul class="tags"><li>RxJS</li><li>NgRx</li><li>SQL Server</li><li>Stored procedures</li><li>Query optimization</li></ul></div>
+      <div><h3>DevOps and CI/CD</h3><ul class="tags"><li>GitHub Actions</li><li>Docker</li><li>Docker Compose</li><li>nginx</li><li>Git</li><li>Jira</li><li>Figma</li><li>Agile / Scrum</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <h2>Let’s work together</h2>
+        <p>I’m open to full stack, .NET and Angular roles in Dubai and Abu Dhabi, and to remote contract work.</p>
+        <a class="btn primary" href="mailto:aminanihala2018@gmail.com">Email me</a>
+        <p class="edu">Bachelor of Computer Applications (BCA), SAFI Institute of Advanced Study, Kerala · 2018 – 2021</p>
+      </div>
+      <div class="links">
+        <a href="mailto:aminanihala2018@gmail.com"><span>Email</span>aminanihala2018@gmail.com</a>
+        <a href="tel:+971509805323"><span>Phone</span>+971 50 980 5323</a>
+        <a href="https://www.linkedin.com/in/amina-nihala-670538222" target="_blank" rel="noopener"><span>LinkedIn</span>amina-nihala</a>
+        <a href="https://github.com/Nihala32" target="_blank" rel="noopener"><span>GitHub</span>Nihala32</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 Amina Nihala K · Al Nahda, Dubai, UAE</div></footer>
+
+<script>
+const menu=document.getElementById('menu'),nav=document.getElementById('nav');
+(()=>{const el=document.getElementById('typed');
+if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+const words=['Full Stack Developer','Angular Engineer','ASP.NET Core Developer'];
+let w=0,i=0,del=false;
+(function tick(){const s=words[w];el.textContent=s.slice(0,i);
+if(!del&&i<s.length){i++;return setTimeout(tick,70)}
+if(!del){del=true;return setTimeout(tick,1600)}
+if(i>0){i--;return setTimeout(tick,35)}
+del=false;w=(w+1)%words.length;setTimeout(tick,300)})();})();
+(()=>{
+const bar=document.getElementById('bar');
+const upd=()=>{const h=document.documentElement;bar.style.transform='scaleX('+Math.min(1,scrollY/Math.max(1,h.scrollHeight-innerHeight))+')'};
+addEventListener('scroll',upd,{passive:true});upd();
+const links=[...document.querySelectorAll('nav a')];
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+links.forEach(a=>{const s=document.querySelector(a.getAttribute('href'));if(s)so.observe(s)});
+document.querySelectorAll('.card,.pillar').forEach(c=>c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')}));
+if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+const t=[...document.querySelectorAll('section:not(.hero) h2,.pillar,.job,.card,.skills>div,.contact')];
+t.forEach(el=>el.classList.add('rv'));
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;el.style.transitionDelay=([...el.parentElement.children].indexOf(el)%4)*90+'ms';el.classList.add('in');ro.unobserve(el);setTimeout(()=>el.style.transitionDelay='',1000)}),{threshold:.12});
+t.forEach(el=>ro.observe(el));
+})();
+menu.addEventListener('click',()=>{const o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o)});
+nav.addEventListener('click',e=>{if(e.target.closest('a')){nav.classList.remove('open');menu.setAttribute('aria-expanded',false)}});
+</script>
 </body>
 </html>
