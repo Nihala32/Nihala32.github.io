@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Amina Nihala K – Full Stack Developer</title>
-<meta name="description" content="Full Stack Developer in Dubai building web apps with Angular, ASP.NET Core and SQL Server.">
+<meta name="description" content="Full Stack Developer in Dubai building AI-powered web apps with Angular, ASP.NET Core and SQL Server.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -100,6 +100,50 @@ a.card:hover{border-color:var(--accent);transform:translateY(-3px)}
 .tags li{list-style:none;border:1px solid var(--line);border-radius:999px;padding:.2rem .75rem;font-size:.8rem;color:var(--muted);background:rgba(255,255,255,.02)}
 ul.tags{padding:0}
 
+/* featured project */
+.featured{grid-column:1/-1;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.2rem,3vw,2.2rem);align-items:center;padding:clamp(1.4rem,3vw,2rem)}
+.featured .shot{border-radius:12px;border:1px solid var(--line);overflow:hidden;background:#0a0d12;aspect-ratio:16/10}
+.featured .shot img{width:100%;height:100%;object-fit:cover;object-position:top left;display:block;transition:transform .6s}
+.featured:hover .shot img{transform:scale(1.03)}
+.badge{display:inline-flex;align-items:center;gap:.45rem;font:500 .78rem var(--mono);color:var(--ok);border:1px solid rgba(95,212,160,.35);background:rgba(95,212,160,.08);border-radius:999px;padding:.25rem .7rem;width:fit-content}
+.badge i{width:.45rem;height:.45rem;border-radius:50%;background:var(--ok)}
+.feats{list-style:none;padding:0;display:grid;gap:.45rem;color:var(--muted);font-size:.95rem}
+.feats li{padding-left:1.4rem;position:relative}
+.feats li::before{content:"✦";position:absolute;left:0;color:var(--accent);font-size:.8rem;top:.15rem}
+.card .actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.4rem}
+.card .actions .btn{min-height:2.5rem;padding:.55rem 1.15rem;font-size:.9rem}
+@media (max-width:900px){.featured{grid-template-columns:1fr}}
+
+/* screenshot gallery */
+.gallery{grid-column:1/-1;display:grid;grid-template-columns:repeat(5,1fr);gap:.9rem;margin-top:-.2rem}
+.shotbtn{all:unset;cursor:zoom-in;display:flex;flex-direction:column;gap:.5rem}
+.shotbtn .frame{border-radius:12px;border:1px solid var(--line);overflow:hidden;aspect-ratio:16/10;background:#0a0d12;transition:border-color .2s,transform .2s}
+.shotbtn img{width:100%;height:100%;object-fit:cover;object-position:top left;display:block}
+.shotbtn:hover .frame,.shotbtn:focus-visible .frame{border-color:var(--accent);transform:translateY(-3px)}
+.shotbtn span{font-size:.82rem;color:var(--muted);text-align:center}
+.lightbox{border:0;padding:0;background:transparent;max-width:min(1200px,94vw);max-height:92vh}
+.lightbox::backdrop{background:rgba(5,7,12,.85);backdrop-filter:blur(4px)}
+.lightbox img{display:block;max-width:100%;max-height:82vh;border-radius:12px;border:1px solid var(--line)}
+.lightbox p{color:var(--text);text-align:center;margin:.8rem auto 0;font-size:.95rem}
+.lightbox button{position:absolute;top:.6rem;right:.6rem;background:rgba(13,16,22,.8);color:var(--text);border:1px solid var(--line);border-radius:999px;width:2.4rem;height:2.4rem;cursor:pointer;font-size:1.1rem}
+@media (max-width:900px){.gallery{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.gallery{grid-template-columns:repeat(2,1fr)}}
+
+/* cv section */
+.cv{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.5rem,4vw,3rem);align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:clamp(1.6rem,4vw,3rem)}
+.cv h2{margin-bottom:1rem}
+.cv p{color:var(--muted);margin-bottom:1.5rem}
+.cv .cta .btn svg{margin-right:.5rem}
+.paper{position:relative;justify-self:center;width:min(100%,300px);aspect-ratio:1/1.32;background:#f6f7fb;color:#1b2030;border-radius:12px;padding:1.4rem 1.3rem;box-shadow:0 30px 70px -25px rgba(143,160,255,.45);transform:rotate(-2.5deg);transition:transform .4s;font-size:.62rem;line-height:1.5;overflow:hidden}
+.paper:hover{transform:rotate(0) translateY(-4px)}
+.paper b{display:block;font:800 1.05rem var(--head);letter-spacing:-.01em;text-align:center}
+.paper small{display:block;text-align:center;color:#5b6274;margin:.2rem 0 .8rem}
+.paper i{display:block;font-style:normal;font-weight:700;font-size:.62rem;letter-spacing:.06em;color:#4954c9;margin:.7rem 0 .3rem;border-bottom:1px solid #dde1ee;padding-bottom:.2rem}
+.paper span{display:block;height:.38rem;border-radius:3px;background:#dfe2ec;margin:.32rem 0}
+.paper span.s{width:70%}.paper span.m{width:85%}
+.paper::after{content:"PDF";position:absolute;right:.9rem;bottom:.9rem;font:700 .7rem var(--mono);color:#fff;background:#e5484d;border-radius:6px;padding:.2rem .45rem}
+@media (max-width:900px){.cv{grid-template-columns:1fr}.paper{width:min(80%,260px)}}
+
 /* skills */
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:2rem 1.5rem}
 .skills h3{font-size:1rem;margin-bottom:.8rem;color:var(--muted);font-weight:600}
@@ -179,10 +223,11 @@ h2.in::after{width:5.5rem}
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#cv">CV</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <a class="btn primary" href="mailto:aminanihala2018@gmail.com">Get in touch</a>
+    <a class="btn primary" href="Amina_Nihala_K_CV.pdf" download><svg style="margin-right:.45rem" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>Download CV</a>
     <button class="menu" id="menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
     </button>
@@ -197,9 +242,10 @@ h2.in::after{width:5.5rem}
         <div class="status"><span class="dot"></span>Immediate joiner · Al Nahda, Dubai</div>
         <h1>Amina<span>Nihala K</span></h1>
         <p class="role" aria-label="Full Stack Developer"><span id="typed">Full Stack Developer</span></p>
-        <p class="lead">I build fast, maintainable web apps with Angular and ASP.NET Core, from the SQL Server queries at the bottom to the interface people actually click. I also use Docker and CI/CD pipelines to ship them reliably.</p>
+        <p class="lead">I build fast, maintainable web apps with Angular and ASP.NET Core, from the SQL Server queries at the bottom to the interface people actually click. I also build AI features with LLMs, and use Docker and CI/CD pipelines to ship them reliably.</p>
         <div class="cta">
           <a class="btn primary" href="#projects">See my work</a>
+          <a class="btn" href="Amina_Nihala_K_CV.pdf" download><svg style="margin-right:.45rem" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>Download CV</a>
           <a class="btn" href="#contact">Get in touch</a>
         </div>
       </div>
@@ -210,7 +256,7 @@ h2.in::after{width:5.5rem}
   Name   = <span class="s">"Amina Nihala K"</span>,
   Role   = <span class="s">"Full Stack"</span>,
   Stack  = [<span class="s">"Angular"</span>, <span class="s">".NET 8"</span>,
-            <span class="s">"SQL Server"</span>],
+            <span class="s">"SQL Server"</span>, <span class="s">"LLMs"</span>],
   Based  = <span class="s">"Dubai"</span>,
   Shipping = <span class="n">true</span>
 };</pre>
@@ -218,7 +264,7 @@ h2.in::after{width:5.5rem}
     </div>
     <div class="stats">
       <div class="stat"><b>4 years</b><span>Building enterprise web apps</span></div>
-      <div class="stat"><b>DevOps</b><span>Hands-on, from Docker builds to automated pipelines</span></div>
+      <div class="stat"><b>AI apps</b><span>LLM features in .NET: CV matching, AI chat, content generation</span></div>
       <div class="stat"><b>CI/CD</b><span>Docker and GitHub Actions pipelines</span></div>
     </div>
   </div>
@@ -230,7 +276,7 @@ h2.in::after{width:5.5rem}
     <div class="about-grid">
       <div>
         <p>I’m a Full Stack .NET developer with four years of experience in Angular, ASP.NET Core, C# and SQL Server. I’ve built scalable REST APIs and responsive Angular apps for legal operations automation and B2B SaaS.</p>
-        <p>I care about clean architecture, query performance and code that’s easy for the next person to read. I have hands-on CI/CD experience with GitHub Actions, Docker and Docker Compose, and I’m extending it to Azure DevOps pipelines.</p>
+        <p>I care about clean architecture, query performance and code that’s easy for the next person to read. I have hands-on CI/CD experience with GitHub Actions, Docker and Docker Compose, and I’m extending it to Azure DevOps pipelines. Lately I’ve been building AI features into .NET apps: provider-agnostic LLM integration, prompt design and safe, rate-limited AI endpoints.</p>
       </div>
       <dl class="facts">
         <div><dt>location</dt><dd>Al Nahda, Dubai</dd></div>
@@ -270,9 +316,11 @@ h2.in::after{width:5.5rem}
         <p class="org">Panasa Technology Pvt Ltd</p>
         <ul>
           <li>Built a scalable B2B Email Campaign Lead Generation Platform with Angular, RxJS, ASP.NET Core and SQL Server.</li>
+          <li>Designed secure REST APIs for efficient frontend-backend communication.</li>
           <li>Cut load times by 30% with lazy loading, OnPush change detection and efficient API design.</li>
           <li>Wrote reusable Angular components and .NET Core modules that reduced code duplication.</li>
           <li>Tuned SQL Server queries and stored procedures for speed and data integrity.</li>
+          <li>Took part in sprint planning, stand-ups, code reviews and retrospectives.</li>
         </ul>
       </div>
     </article>
@@ -283,12 +331,34 @@ h2.in::after{width:5.5rem}
   <div class="wrap">
     <h2>Selected work</h2>
     <div class="projects">
-      <a class="card" href="https://github.com/Nihala32/jobtracker-devops" target="_blank" rel="noopener">
-        <h3>Job Application Tracker</h3>
-        <p>A full stack tracker with a dashboard, search and filters. Docker Compose runs the API, nginx-served Angular frontend and SQL Server with one command, with database health checks and automatic EF Core migrations. GitHub Actions builds the API, the Angular app and the Docker images on every push.</p>
-        <ul class="tags"><li>Angular</li><li>.NET 8</li><li>Docker Compose</li><li>GitHub Actions</li></ul>
-        <span class="more">View on GitHub</span>
-      </a>
+      <article class="card featured">
+        <div>
+          <span class="badge"><i></i>Live demo</span>
+          <h3 style="font-size:1.55rem;margin:.8rem 0 .6rem">AI Job Tracker</h3>
+          <p>A full stack job search assistant with built-in AI. Paste a job advert and it fills in the details, scores how well your CV fits, tailors your CV, writes cover letters and prepares interview questions.</p>
+          <ul class="feats" style="margin:1rem 0">
+            <li>Provider-agnostic LLM client (Groq, Ollama, OpenAI), with prompts unit-tested against a fake AI</li>
+            <li>Kanban board, analytics dashboard with funnel and weekly goal, dark mode, Ctrl+K command palette</li>
+            <li>Public demo mode: sample data, scheduled reset, per-visitor AI rate limits</li>
+            <li>Docker Compose locally; deployed as a container to Vercel; GitHub Actions CI with 40 xUnit tests</li>
+          </ul>
+          <ul class="tags"><li>Angular 22</li><li>.NET 8</li><li>SQL Server</li><li>LLM / Groq</li><li>Docker</li><li>GitHub Actions</li><li>Vercel</li></ul>
+          <div class="actions">
+            <a class="btn primary" href="https://ai-jobtracker-mu.vercel.app" target="_blank" rel="noopener">Try the live demo</a>
+            <a class="btn" href="https://github.com/Nihala32/jobtracker-devops" target="_blank" rel="noopener">View code</a>
+          </div>
+        </div>
+        <a class="shot" href="https://ai-jobtracker-mu.vercel.app" target="_blank" rel="noopener" aria-label="Open the AI Job Tracker live demo">
+          <img src="https://raw.githubusercontent.com/Nihala32/jobtracker-devops/main/docs/ai-dashboard.png" alt="AI Job Tracker dashboard with KPIs, today list and application funnel" loading="lazy" width="1440" height="900">
+        </a>
+      </article>
+      <div class="gallery" aria-label="AI Job Tracker screenshots">
+        <button class="shotbtn" type="button" data-full="https://raw.githubusercontent.com/Nihala32/jobtracker-devops/main/docs/ai-details.png" data-caption="CV match + tailoring"><div class="frame"><img src="https://raw.githubusercontent.com/Nihala32/jobtracker-devops/main/docs/ai-details.png" alt="CV match + tailoring screenshot" loading="lazy"></div><span>CV match + tailoring</span></button>
+        <button class="shotbtn" type="button" data-full="https://raw.githubusercontent.com/Nihala32/jobtracker-devops/main/docs/ai-chat.png" data-caption="Ask AI chat"><div class="frame"><img src="https://raw.githubusercontent.com/Nihala32/jobtracker-devops/main/docs/ai-chat.png" alt="Ask AI chat screenshot" loading="lazy"></div><span>Ask AI chat</span></button>
+        <button class="shotbtn" type="button" data-full="https://raw.githubusercontent.com/Nihala32/jobtracker-devops/main/docs/ai-add.png" data-caption="AI job analyser"><div class="frame"><img src="https://raw.githubusercontent.com/Nihala32/jobtracker-devops/main/docs/ai-add.png" alt="AI job analyser screenshot" loading="lazy"></div><span>AI job analyser</span></button>
+        <button class="shotbtn" type="button" data-full="https://raw.githubusercontent.com/Nihala32/jobtracker-devops/main/docs/ai-dark.png" data-caption="Dark mode dashboard"><div class="frame"><img src="https://raw.githubusercontent.com/Nihala32/jobtracker-devops/main/docs/ai-dark.png" alt="Dark mode dashboard screenshot" loading="lazy"></div><span>Dark mode dashboard</span></button>
+        <button class="shotbtn" type="button" data-full="https://raw.githubusercontent.com/Nihala32/jobtracker-devops/main/docs/ai-board.png" data-caption="Kanban board"><div class="frame"><img src="https://raw.githubusercontent.com/Nihala32/jobtracker-devops/main/docs/ai-board.png" alt="Kanban board screenshot" loading="lazy"></div><span>Kanban board</span></button>
+      </div>
       <div class="card">
         <h3>Legal Operations Automation</h3>
         <p>A law firm platform with AI-assisted validation and audit trails, configurable per client and built to scale across deployments.</p>
@@ -315,7 +385,31 @@ h2.in::after{width:5.5rem}
       <div><h3>Frontend</h3><ul class="tags"><li>Angular 20</li><li>TypeScript</li><li>JavaScript</li><li>HTML5</li><li>CSS3 / SCSS</li><li>Bootstrap</li><li>Kendo UI</li></ul></div>
       <div><h3>Backend</h3><ul class="tags"><li>ASP.NET Core</li><li>.NET 8</li><li>C#</li><li>REST APIs</li><li>Entity Framework Core</li></ul></div>
       <div><h3>State and data</h3><ul class="tags"><li>RxJS</li><li>NgRx</li><li>SQL Server</li><li>Stored procedures</li><li>Query optimization</li></ul></div>
-      <div><h3>DevOps and CI/CD</h3><ul class="tags"><li>GitHub Actions</li><li>Docker</li><li>Docker Compose</li><li>nginx</li><li>Git</li><li>Jira</li><li>Figma</li><li>Agile / Scrum</li></ul></div>
+      <div><h3>AI and testing</h3><ul class="tags"><li>LLM integration</li><li>Prompt design</li><li>Groq / OpenAI API</li><li>Ollama</li><li>xUnit</li></ul></div>
+      <div><h3>DevOps and CI/CD</h3><ul class="tags"><li>GitHub Actions</li><li>Docker</li><li>Docker Compose</li><li>nginx</li><li>Vercel</li><li>Git</li><li>Jira</li><li>Figma</li><li>Agile / Scrum</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="cv">
+  <div class="wrap">
+    <div class="cv">
+      <div>
+        <h2>My CV</h2>
+        <p>Four years of full stack experience with Angular, ASP.NET Core, C# and SQL Server, plus hands-on CI/CD with Docker and GitHub Actions. Everything on one page: experience, key projects, skills and education.</p>
+        <div class="cta">
+          <a class="btn primary" href="Amina_Nihala_K_CV.pdf" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></svg>Download CV (PDF)</a>
+          <a class="btn" href="Amina_Nihala_K_CV.pdf" target="_blank" rel="noopener">View online</a>
+        </div>
+      </div>
+      <a class="paper" href="Amina_Nihala_K_CV.pdf" target="_blank" rel="noopener" aria-label="Open Amina Nihala K's CV (PDF)">
+        <b>AMINA NIHALA K</b>
+        <small>Full Stack Developer · Angular · .NET Core · SQL Server</small>
+        <i>PROFESSIONAL SUMMARY</i><span></span><span class="m"></span><span class="s"></span>
+        <i>EXPERIENCE</i><span></span><span class="m"></span><span></span><span class="s"></span>
+        <i>KEY PROJECTS</i><span class="m"></span><span></span><span class="s"></span>
+        <i>EDUCATION</i><span class="s"></span>
+      </a>
     </div>
   </div>
 </section>
@@ -334,11 +428,18 @@ h2.in::after{width:5.5rem}
         <a href="tel:+971509805323"><span>Phone</span>+971 50 980 5323</a>
         <a href="https://www.linkedin.com/in/amina-nihala-670538222" target="_blank" rel="noopener"><span>LinkedIn</span>amina-nihala</a>
         <a href="https://github.com/Nihala32" target="_blank" rel="noopener"><span>GitHub</span>Nihala32</a>
+        <a href="Amina_Nihala_K_CV.pdf" download><span>CV</span>Download PDF ↓</a>
       </div>
     </div>
   </div>
 </section>
 </main>
+
+<dialog class="lightbox" id="lightbox" aria-label="Screenshot preview">
+  <button type="button" id="lbClose" aria-label="Close">✕</button>
+  <img id="lbImg" alt="">
+  <p id="lbCap"></p>
+</dialog>
 
 <footer><div class="wrap">© 2026 Amina Nihala K · Al Nahda, Dubai, UAE</div></footer>
 
@@ -362,11 +463,15 @@ const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.f
 links.forEach(a=>{const s=document.querySelector(a.getAttribute('href'));if(s)so.observe(s)});
 document.querySelectorAll('.card,.pillar').forEach(c=>c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')}));
 if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
-const t=[...document.querySelectorAll('section:not(.hero) h2,.pillar,.job,.card,.skills>div,.contact')];
+const t=[...document.querySelectorAll('section:not(.hero) h2,.pillar,.job,.card,.skills>div,.cv,.contact')];
 t.forEach(el=>el.classList.add('rv'));
 const ro=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;el.style.transitionDelay=([...el.parentElement.children].indexOf(el)%4)*90+'ms';el.classList.add('in');ro.unobserve(el);setTimeout(()=>el.style.transitionDelay='',1000)}),{threshold:.12});
 t.forEach(el=>ro.observe(el));
 })();
+(()=>{const lb=document.getElementById('lightbox'),img=document.getElementById('lbImg'),cap=document.getElementById('lbCap');
+document.querySelectorAll('.shotbtn').forEach(b=>b.addEventListener('click',()=>{img.src=b.dataset.full;img.alt=b.dataset.caption+' screenshot';cap.textContent=b.dataset.caption;lb.showModal()}));
+document.getElementById('lbClose').addEventListener('click',()=>lb.close());
+lb.addEventListener('click',e=>{if(e.target===lb)lb.close()});})();
 menu.addEventListener('click',()=>{const o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o)});
 nav.addEventListener('click',e=>{if(e.target.closest('a')){nav.classList.remove('open');menu.setAttribute('aria-expanded',false)}});
 </script>
